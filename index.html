@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synchronized Scroll</title>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div id="main-list" class="list">
+        <ul id="main-list-items">
+          <!-- Items will be dynamically created by JavaScript -->
+        </ul>
+      </div>
+      <div id="side-list" class="list">
+        <ul id="side-list-items">
+          <!-- Items will be dynamically created by JavaScript -->
+        </ul>
+      </div>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .list {
+    width: 300px;
+    height: 500px;
+    overflow: auto;
+    border: 1px solid black;
+    margin: 20px;
+  }
+  .selected {
+    background-color: yellow;
+  }
+</style>
